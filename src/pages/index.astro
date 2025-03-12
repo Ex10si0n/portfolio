@@ -1,216 +1,224 @@
 ---
-import { SOCIALS } from "../data/socials";
+import {SOCIALS} from "../data/socials";
 import Layout from "../layouts/Layout.astro";
-import Drawer from "../components/Drawer.astro";
 import Component from "../components/Component.astro";
-
 import IconCursor from "../icons/cursor.astro";
 import IconAt from "../icons/at.astro";
-import IconArrow from "../icons/arrow.astro";
+import IconAspires from "../icons/aspires.astro";
+import ArrowLink from "@/icons/arrow-link.astro";
 ---
 
-<Layout title="Andriy Kuktenko | Full Stack Engineer">
-  <main
-    id="content"
-    class="flex h-full min-h-screen flex-col items-center justify-center gap-6 py-10 sm:py-10 md:py-4 lg:gap-12 drawer drawer-end"
-  >
-    <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
-      <section
-        id="about"
-        aria-label="About me"
-        class="group col-span-2 flex h-40 w-full rotate-0 sm:-rotate-2 flex-col rounded-3xl border-4 border-white bg-sky-50 sm:bg-stone-100 p-4 transition-all sm:hover:rotate-0 sm:hover:bg-sky-50"
-      >
-        <div
-          class="flex lg:items-start gap-4 flex-row items-center text-center"
-        >
-          <img
-            class="aspect-square size-10 rounded-full grayscale-0 scale-110 sm:grayscale sm:scale-100 transition-all sm:group-hover:scale-110 sm:group-hover:grayscale-0"
-            src="/images/avatar.webp"
-            alt="avatar"
-          />
-          <div class="flex flex-col items-start">
-            <p
-              class="font-roboto-condensed font-semibold text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
+<Layout title="Zhongbo Yan | Software Engineer">
+    <main
+            id="content"
+            class="flex h-full min-h-screen flex-col items-center justify-center gap-6 py-10 md:py-4 lg:gap-12 drawer drawer-end bg-stone-50 dark:bg-gray-900 transition-colors duration-200"
+    >
+        <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
+            <!-- About Section -->
+            <section
+                    id="about"
+                    aria-label="About me"
+                    class="group col-span-2 flex h-40 w-full rotate-0 sm:-rotate-2 flex-col rounded-3xl border-4 border-white dark:border-gray-700 bg-sky-50 dark:bg-sky-950 sm:bg-stone-100 dark:sm:bg-gray-800 p-4 transition-all sm:hover:rotate-0 sm:hover:bg-sky-50 dark:sm:hover:bg-sky-950"
             >
-              Andriy Kuktenko
-            </p>
-            <p
-              class="font-roboto-condensed font-medium text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
-            >
-              Full Stack Engineer
-            </p>
-          </div>
+                <div class="flex lg:items-start gap-4 flex-row items-center">
+                    <img
+                            class="aspect-square size-10 rounded-full grayscale-0 scale-110 sm:grayscale sm:scale-100 transition-all sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+                            src="/images/avatar.png"
+                            alt="avatar"
+                    />
+                    <div class="flex flex-col items-start">
+                        <p class="font-roboto-condensed font-semibold text-sky-600 dark:text-sky-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-sky-600 dark:sm:group-hover:text-sky-400">
+                            Zhongbo Yan
+                        </p>
+                        <p class="font-roboto-condensed font-medium text-sky-600 dark:text-sky-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-sky-600 dark:sm:group-hover:text-sky-400">
+                            Software Engineer
+                        </p>
+                    </div>
+                </div>
+                <p class="font-roboto-condensed font-thin text-sm max-w-72 text-sky-600 dark:text-sky-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-sky-600 dark:sm:group-hover:text-sky-400">
+                    👋 Hello! I focus on cloud computing, machine learning, algorithms, information security, full-stack
+                    development, and explaining cool stuff. I'm currently a Master's student at Carnegie Mellon
+                    University.
+                </p>
+            </section>
+
+            <!-- Google Experience -->
+            <div class="group overflow-hidden relative flex gap-1 h-40 w-36 flex-col rounded-3xl border-4 border-white dark:border-gray-700 sm:bg-stone-100 dark:sm:bg-gray-800 p-4 transition-all bg-rose-50 dark:bg-rose-950 rotate-0 sm:rotate-1 sm:hover:rotate-0 sm:hover:bg-rose-50 dark:sm:hover:bg-rose-950">
+                <img
+                        class="aspect-square size-10 rounded-full grayscale-0 transition-all sm:grayscale sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+                        src="/images/google.webp"
+                        alt="Google"
+                />
+                <p class="font-roboto-condensed font-normal text-sm text-rose-700 dark:text-rose-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-rose-700 dark:sm:group-hover:text-rose-400">
+                    Software Engineer Intern
+                </p>
+                <p class="flex gap-2 font-roboto-condensed font-thin text-sm text-rose-700 dark:text-rose-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-rose-700 dark:sm:group-hover:text-rose-400">
+                    at <a
+                        data-ccursor
+                        href="https://google.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Google (opens in a new tab)"
+                        class="inline-flex z-10 rounded-md font-roboto-condensed font-medium text-sm group-hover:text-[#ff2123] dark:group-hover:text-[#ff2123]"
+                >Google</a>
+                </p>
+                <IconCursor/>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="group overflow-hidden flex h-40 w-36 flex-col gap-1 rounded-3xl border-4 border-white dark:border-gray-700 sm:bg-stone-100 dark:sm:bg-gray-800 p-4 transition-all rotate-0 bg-yellow-50 dark:bg-yellow-950 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-yellow-50 dark:sm:hover:bg-yellow-950">
+                <img
+                        class="aspect-square z-10 size-10 rounded-full transition-all grayscale-0 scale-110 sm:scale-100 sm:grayscale sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+                        src="/images/gmail.webp"
+                        alt="gmail"
+                />
+                <p class="font-roboto-condensed z-10 font-normal text-sm text-yellow-600 dark:text-yellow-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-yellow-600 dark:sm:group-hover:text-yellow-400">
+                    Let's keep in touch!
+                </p>
+                <IconAt/>
+                <a
+                        data-ccursor
+                        class="inline-flex items-center gap-2 font-roboto-condensed px-3 py-2 text-yellow-600 dark:text-yellow-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-yellow-600 dark:sm:group-hover:text-yellow-400 bg-white dark:bg-gray-800 bg-opacity-20 dark:bg-opacity-40 border border-white dark:border-gray-700 border-opacity-30 rounded-lg shadow-lg backdrop-blur-sm hover:bg-opacity-30 transition-all duration-200 font-medium"
+                        href="mailto:me@aspires.cc"
+                        data-umami-event="Mail me click"
+                        id="mail"
+                >
+                    Mail me
+                    <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                </a>
+            </div>
         </div>
-        <p
-          class="font-roboto-condensed font-thin text-sm max-w-72 text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
-        >
-          I primarily focus on TypeScript-based full-stack projects (Node.js,
-          React, React Native) and cloud platforms (AWS, DigitalOcean, Vercel,
-          Firebase, etc.), serving as a Full Stack Engineer.
-        </p>
-      </section>
-      <div
-        class="group overflow-hidden relative flex gap-1 h-40 w-36 flex-col rounded-3xl border-4 border-white sm:bg-stone-100 p-4 transition-all bg-rose-50 rotate-0 sm:rotate-1 sm:hover:rotate-0 sm:hover:bg-rose-50"
-      >
-        <img
-          class="aspect-square size-10 rounded-full grayscale-0 transition-all sm:grayscale sm:scale-100 sm:group-hover:scale-110 sm:group-hover:grayscale-0"
-          src="/images/redvike.webp"
-          alt="redvike"
-        />
-        <p
-          class="font-roboto-condensed font-normal text-sm text-rose-700 sm:text-inherit sm:group-hover:text-rose-700"
-        >
-          Senior Full Stack Engineer
-        </p>
-        <p
-          class="flex gap-2 font-roboto-condensed font-thin text-sm text-rose-700 sm:text-inherit sm:group-hover:text-rose-700"
-        >
-          at <a
-            data-ccursor
-            href="https://redvike.com/case-studies/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Redvike (opens in a new tab)"
-            class="inline-flex z-10 rounded-md font-roboto-condensed font-medium text-sm group-hover:text-[#ff2123]"
-            >Redvike</a
-          >
-        </p>
-        <IconCursor />
-      </div>
-      <div
-        class="group overflow-hidden flex h-40 w-36 flex-col gap-1 rounded-3xl border-4 border-white sm:bg-stone-100 p-4 transition-all rotate-0 bg-yellow-50 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-yellow-50"
-      >
-        <img
-          class="aspect-square z-10 size-10 rounded-full transition-all grayscale-0 scale-110 sm:scale-100 sm:grayscale sm:group-hover:scale-110 sm:group-hover:grayscale-0"
-          src="/images/gmail.webp"
-          alt="redvike"
-        />
-        <p
-          class="font-roboto-condensed z-10 font-normal text-sm text-yellow-600 sm:text-inherit sm:group-hover:text-yellow-600"
-        >
-          Let's keep in touch!
-        </p>
-        <IconAt />
-        <a
-          data-ccursor
-          class="inline-flex items-center gap-2 font-roboto-condensed px-3 py-2 text-yellow-600 sm:text-inherit sm:group-hover:text-yellow-600 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg shadow-lg backdrop-blur-sm hover:bg-opacity-30 transition-all duration-200 font-medium"
-          href="mailto:andriy.kuktenko@gmail.com"
-          data-umami-event="Mail me click"
-          id="mail"
-        >
-          Mail me
-          <span
-            class="w-2 h-2 rounded-full bg-green-400 duration-1000 animate-pulse"
-          ></span>
-        </a>
-      </div>
-    </div>
-    <div class="flex flex-col items-center justify-center gap-4">
-      <h1
-        class="hover-grad-text font-roboto-condensed uppercase font-semibold text-5xl lg:text-[7rem] lg:leading-[8rem]"
-      >
-        A. Kuktenko
-      </h1>
-      <div
-        class="flex w-full items-center justify-center overflow-hidden gap-2"
-      >
-        <p
-          class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2rem]"
-        >
-          deliver
-          <div class="group relative inline-block">
-            <div
-              class="transition-transform duration-100 group-hover:-translate-y-16"
-            >
-              <p
-                class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2rem]"
-              >
-                full stack solutions.
-              </p>
+
+        <!-- Name and Title Section -->
+        <div class="flex flex-col items-center justify-center gap-4">
+            <h1 class="font-roboto-condensed uppercase font-semibold text-5xl lg:text-[7rem] lg:leading-[8rem] pb-1 text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300">
+                @Ex10si0n
+            </h1>
+            <div class="flex w-full items-center justify-center overflow-hidden gap-2">
+                <div class="group relative inline-block pb-2">
+                    <div class="transition-transform duration-100 group-hover:-translate-y-16">
+                        <p class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2.5rem] text-black dark:text-white">
+                            building intelligent systems
+                        </p>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 w-max translate-y-16 transition-transform duration-100 group-hover:translate-y-0 group-hover">
+                        <p class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2.5rem] bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-violet-500">
+                            explaining them simply.
+                        </p>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
+            <!-- Social Media Links -->
             <div
-              class="absolute inset-x-0 top-0 w-max translate-y-16 transition-transform duration-100 group-hover:translate-y-0"
+                    aria-label="Social media"
+                    class="flex group flex-wrap h-40 w-36 flex-col rounded-3xl border-4 border-white dark:border-gray-700 p-4 transition-all rotate-0 bg-cyan-50 dark:bg-cyan-950 sm:bg-stone-100 dark:sm:bg-gray-800 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-slate-100 dark:sm:hover:bg-slate-900"
             >
-              <p
-                class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
-              >
-                fast.
-              </p>
+                {
+                    SOCIALS.map((social) => (
+                            <a
+                                    data-ccursor
+                                    class="flex flex-col basis-1/2 items-center justify-center rounded-md"
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    aria-label={`${social.name} (opens in a new tab)`}
+                                    data-umami-event={`${social.name} click`}
+                                    id={social.name}
+                            >
+                                <Component component={social.icon}/>
+                            </a>
+                    ))
+                }
             </div>
-          </div>
-        </p>
-      </div>
-    </div>
-    <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
-      <div
-        aria-label="Social media"
-        class="flex group flex-wrap h-40 w-36 flex-col rounded-3xl border-4 border-white p-4 transition-all rotate-0 bg-cyan-50 sm:bg-stone-100 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-cyan-50"
-      >
-        {
-          SOCIALS.map((social) => (
+
+            <!-- Blog Link -->
+            <div class="drawer-content" onclick="window.location.href='https://aspires.cc';">
+                <label
+                        class="hover:text-orange-600 dark:hover:text-orange-400 group relative sm:cursor-none overflow-hidden py-4 px-0 flex h-40 w-36 flex-col gap-2 rounded-3xl border-4 border-white dark:border-gray-700 transition-all bg-orange-100 dark:bg-orange-950 rotate-0 sm:-rotate-2 sm:hover:rotate-0 sm:bg-stone-100 dark:sm:bg-gray-800 sm:hover:bg-orange-100 dark:sm:hover:bg-orange-950"
+                        id="experience"
+                >
+                    <span class="p-4 pt-0 font-roboto-condensed z-10 font-medium text-2xl text-orange-600 dark:text-orange-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-orange-600 dark:sm:group-hover:text-orange-400">
+                        Visit My<br/>
+                        Blog <ArrowLink/>
+                        <span class="absolute z-10 bottom-4 left-1/2 -translate-x-1/2">
+                            <span class="text-sm inline-flex items-center gap-2 font-roboto-condensed px-3 py-2 text-orange-600 dark:text-orange-400 sm:text-inherit dark:sm:text-gray-300 sm:group-hover:text-orange-600 dark:sm:group-hover:text-orange-400 bg-white dark:bg-gray-800 bg-opacity-20 dark:bg-opacity-40 border border-white dark:border-gray-700 border-opacity-30 rounded-lg shadow-lg backdrop-blur-sm hover:bg-opacity-30 transition-all duration-200 font-medium">
+                                aspires.cc
+                                <span class="ml-1 w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                            </span>
+                        </span>
+                    <IconAspires/>
+                    </span>
+                </label>
+            </div>
+
+            <!-- Location Map -->
             <a
-              data-ccursor
-              class="flex flex-col basis-1/2 items-center justify-center rounded-md"
-              href={social.url}
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label={`${social.name} (opens in a new tab)`}
-              data-umami-event={`${social.name} click`}
-              id={social.name}
+                    href="https://www.google.com/maps/place/San+Francisco+Bay+Area,+CA"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="San Francisco Bay Area, CA"
+                    class="relative sm:cursor-none group overflow-hidden col-span-2 h-40 w-full rounded-3xl border-4 border-white dark:border-gray-700 p-4 transition-all rotate-0 sm:rotate-2 sm:hover:rotate-0"
             >
-              <Component component={social.icon} />
+                <div class="absolute inset-0 z-10 bg-[url('/images/bay_area.jpg')] bg-center bg-cover bg-no-repeat filter grayscale-0 sm:grayscale sm:group-hover:grayscale-0"/>
+                <div class="absolute z-30 left-1/2 top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 animate-marker rounded-full bg-blue-500"/>
+                <div class="absolute left-1/2 top-1/2 z-30 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-neutral-50 bg-blue-500 shadow-2xl"/>
+                <span class="absolute left-4/2 top-1 z-30 font-semibold font-roboto-condensed text-lg text-white">San Francisco Bay Area, CA</span>
             </a>
-          ))
-        }
-      </div>
-      <div class="drawer-content">
-        <label
-          for="experience-drawer"
-          class="group relative sm:cursor-none overflow-hidden py-4 px-0 flex h-40 w-36 flex-col gap-2 rounded-3xl border-4 border-white transition-all bg-blue-100 rotate-0 sm:-rotate-2 sm:hover:rotate-0 sm:bg-stone-100 sm:hover:bg-blue-100"
-          data-umami-event="Show my work click"
-          id="experience"
-        >
-          <span
-            class="inline-flex sm:cursor-none gap-3 items-center text-3xl font-bold font-serif italic sm:not-italic sm:group-hover:italic text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500 rounded-lg transition-all duration-100"
-          >
-            Show
-            <IconArrow />
-          </span>
-          <span
-            class="font-serif sm:cursor-none italic sm:not-italic sm:group-hover:italic text-3xl font-bold transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
-            >My</span
-          >
-          <span
-            class="font-serif sm:cursor-none italic sm:not-italic sm:group-hover:italic text-3xl font-bold transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
-            >Work</span
-          >
-        </label>
-      </div>
-      <a
-        href="https://maps.app.goo.gl/nBVupWZoVn7PLiXk9"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Florida, USA"
-        class="relative sm:cursor-none group overflow-hidden col-span-2 h-40 w-full rounded-3xl border-4 border-white p-4 transition-all rotate-0 sm:rotate-2 sm:hover:rotate-0"
-      >
-        <div
-          class="absolute inset-0 z-10 bg-[url('/images/florida.webp')] bg-center bg-cover bg-no-repeat filter grayscale-0 sm:grayscale sm:group-hover:grayscale-0"
-        >
         </div>
-        <div
-          class="absolute z-30 left-1/2 top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 animate-marker rounded-full bg-blue-500"
-        >
-        </div>
-        <div
-          class="absolute left-1/2 top-1/2 z-30 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-neutral-50 bg-blue-500 shadow-2xl"
-        >
-        </div>
-        <span
-          class="absolute left-4/2 top-1 z-30 font-semibold font-roboto-condensed text-lg text-white"
-          >FLORIDA, USA</span
-        >
-      </a>
-    </div>
-    <Drawer />
-  </main>
+
+
+    </main>
 </Layout>
+
+<script>
+    // Use system dark mode preference
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Apply theme based on system preference
+    function applyTheme() {
+        if (systemPrefersDark.matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }
+
+    // Apply theme on page load
+    applyTheme();
+
+    // Listen for system preference changes
+    systemPrefersDark.addEventListener('change', applyTheme);
+</script>
+
+<style is:global>
+/* Add this to your global CSS */
+:root {
+    color-scheme: light dark;
+    }
+
+/* Adjust hover-grad-text for dark mode if needed */
+.hover-grad-text {
+    transition: all 0.3s ease;
+    }
+
+.hover-grad-text:hover {
+    background: linear-gradient(to right, #f59e0b, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    }
+
+/* Define dark mode animation if needed */
+@keyframes marker {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.4; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    }
+
+.animate-marker {
+    animation: marker 2s ease-in-out infinite;
+    }
+</style>
