@@ -35,16 +35,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 🖱️ Context Cursor
-
-For the custom cursor effect, I'm using the [context-cursor](https://github.com/PavelLaptev/context-cursor) library.
-
-To install it:
-
-```bash
-cd src/libs
-git clone git@github.com:PavelLaptev/context-cursor.git
-```
 
 ## 📝 License
 
