@@ -1,4 +1,4 @@
-import contextCursor from "../libs/context-cursor/contextCursor";
+import contextCursor from "../libs/contextCursor";
 
 const mq = window.matchMedia("(min-width: 640px)");
 if (mq.matches) {
